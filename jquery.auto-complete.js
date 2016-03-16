@@ -1,5 +1,5 @@
 /*
-	jQuery autoComplete v1.0.7
+	jQuery autoComplete v1.0.8
     Copyright (c) 2014 Simon Steinberger / Pixabay
     GitHub: https://github.com/Pixabay/jQuery-autoComplete
 	License: http://www.opensource.org/licenses/mit-license.php
@@ -59,7 +59,7 @@
             }
             $(window).on('resize.autocomplete', that.updateSC);
 
-            that.sc.appendTo('body');
+            that.sc.appendTo(o.el);
 
             that.sc.on('mouseleave', '.autocomplete-suggestion', function (){
                 $('.autocomplete-suggestion.selected').removeClass('selected');
@@ -97,6 +97,7 @@
                 if (data.length && val.length >= o.minChars) {
                     var s = '';
                     for (var i=0;i<data.length;i++) s += o.renderItem(data[i], val);
+                    s += o.lastItem;
                     that.sc.html(s);
                     that.updateSC(0);
                 }
@@ -155,6 +156,7 @@
     }
 
     $.fn.autoComplete.defaults = {
+        el: "body",
         source: 0,
         minChars: 3,
         delay: 150,
@@ -166,6 +168,7 @@
             var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
             return '<div class="autocomplete-suggestion" data-val="' + item + '">' + item.replace(re, "<b>$1</b>") + '</div>';
         },
+        lastItem: '',
         onSelect: function(e, term, item){}
     };
 }(jQuery));

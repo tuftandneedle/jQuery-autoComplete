@@ -22,6 +22,12 @@ https://goodies.pixabay.com/jquery/auto-complete/demo.html
 
 ## Changelog
 
+### Version 1.0.8 - 2016/03/16
+
+* Add 'lastItem' option to render a static final item. Commonly used as an
+  attribution field.
+* Add 'el' option to specify element for appending the typeahead div.
+
 ### Version 1.0.7 - 2015/08/15
 
 * Fixed #29: Select item with tab.
