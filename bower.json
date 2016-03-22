@@ -2,7 +2,7 @@
     "name": "jquery-auto-complete",
     "description": "A lightweight autocomplete plugin for jQuery.",
     "main": "jquery.auto-complete.js",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "dependencies": {
         "jquery": ">=1.7"
     },

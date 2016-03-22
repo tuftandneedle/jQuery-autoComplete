@@ -22,6 +22,10 @@ https://goodies.pixabay.com/jquery/auto-complete/demo.html
 
 ## Changelog
 
+### Version 1.0.9 - 2016/03/22
+
+* Prevent enter from submitting when autocomplete is in a form
+
 ### Version 1.0.8 - 2016/03/16
 
 * Add 'lastItem' option to render a static final item. Commonly used as an
